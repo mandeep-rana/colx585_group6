@@ -8,6 +8,20 @@
 - Meeting minutes will be posted on the Slack group chat immediately after each meeting.
 
 ### On Responsibilities
-- Each member agrees to take responsibility of the tasks they are given each week and the quality of said tasks.
+- Each member agrees to take responsibility for the tasks they are given each week and the quality of these tasks.
+- Each member agrees to put in at least 6 hours of work on the project each week.
 - Each member agrees to review each others' pull requests.
 - Each member agrees to update the group on their progress via Slack.
+- Each member agrees to ask for help or help another member if they are facing obstacles.
+- Each member agrees to complete their tasks ahead of time to account for any final edits.
+
+### Code of Conduct
+- Each member agrees to be considerate of each other’s time.
+- Each member agrees to treat each other respectfully.
+- In case of conflict, each member agrees to be democratic.
+
+The following team members acknowledge and agree to the above statements:
+- Dingan Chen
+- Mandeep Singh
+- Fasih Tiwana
+- Jan Urquico
