@@ -7,6 +7,11 @@
 - Meetings will take place on Zoom.
 - Meeting minutes will be posted on the Slack group chat immediately after each meeting.
 
+### On Online Collaboration
+- Each member agrees to use Zoom or Slack for weekly meetings.
+- Each member agrees to use Google Colab to run code and Google Drive to store data.
+- Each member agrees to use Slack to communicate with the rest of the group about the project.
+
 ### On Responsibilities
 - Each member agrees to take responsibility for the tasks they are given each week and the quality of these tasks.
 - Each member agrees to put in at least 6 hours of work on the project each week.
