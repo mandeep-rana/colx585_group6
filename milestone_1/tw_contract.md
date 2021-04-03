@@ -9,7 +9,7 @@
 
 ### On Online Collaboration
 - Each member agrees to use Zoom or Slack for weekly meetings.
-- Each member agrees to use Google Colab to run code.
+- Each member agrees to use Google Colab to run code and Google Drive to store data.
 - Each member agrees to use Slack to communicate with the rest of the group about the project.
 
 ### On Responsibilities
