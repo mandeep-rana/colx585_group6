@@ -12,9 +12,9 @@
 - By working on this project, we will learn newly introduced models and technology which will help us to understand these concepts in detail.
 
 ##### Data
-We will be using multilingual corpus of ‘TEDx talks for speech recognition and translation’ from http://openslr.org/100/.  
+We will be using multilingual corpus of ‘TEDx talks for speech recognition and translation’ from http://openslr.org/100/.  Statistics about the data is as below:
 
-|   |   |
+
 |---|---|
 | Spanish speech and transcripts data size  | 35GB |
 | Spanish speech and transcripts with aligned English translations  |  13GB |
@@ -23,9 +23,9 @@ We will be using multilingual corpus of ‘TEDx talks for speech recognition and
 |  Total hours of audio | ~218  |
 |  Gogle Drive space | 100GB  |
 |  Google Colab Pro space | 190GB  |
-|---|---|
+
     
-| Set | talks | sentences | words src | time |
+| Set | Talks | Sentences | Words src | Time |
 | :-----: | :-: | :-: | :-: | :-: |
 | Train | 988 | 102171 | 1676862 | 212h18m21s |
 | Valid | 12 | 905 | 14327 | 1h56m53s |
