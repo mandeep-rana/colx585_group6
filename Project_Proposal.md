@@ -4,7 +4,7 @@
  - This project will use `Automatic Speech Recognition(ASR)` with Wav2Vec2 on Spanish Audio and convert it to English text. 
  - Our plan is to utilize a fine tuned XLSR-Wav2Vec2 Multilingual model using `Huggingface Transformer`, input the Spanish audio dataset from `openslr.org` or `commonvoice.mozilla.org`. The overall model architecture will be pipeline based, where audio input will first be converted into Spanish text using XSLR-Wav2Vec2. Then we will use this text output from XLSR as an input for an MT model, which will translate the Spanish text to English text-based translation.
 
-![](./img/flow.png)
+![](./img/timeline.PNG)
 
 ##### Motivation
 - It's a very intriguing, and exciting project to work on, moreover, it is a great opportunity for us to learn new models which fall into the speech data processing category (example: XLSR- released in September 2020), and combine these new tools with what we have learned in the previous block (NMT , FastText etc). We aim to create a new model which is relatively new in terms of work done in the industry.
@@ -42,4 +42,5 @@ We will evaluate out system on two main metrics. One is WER(Word error rate) for
 - We will deliver an End to End working model which will fulfill the objective of the project and completed on time, with the quality as per defined in the different milestones
 
 ##### Project Milestones
-![](./img/timeline.png)
+
+![](./img/timeline.PNG)
