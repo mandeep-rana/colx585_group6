@@ -14,13 +14,13 @@
 ##### Data
 We will be using multilingual corpus of ‘TEDx talks for speech recognition and translation’ from http://openslr.org/100/.  
 
-|---|---|---|---|---|
-| Spanish speech and transcripts data size  | 35GB   |
-| Spanish speech and transcripts with aligned English translations  |  13GB |
-| Sampling Rate  | 48KHZ   |
-|  Total hours of audio | 350  |
-|  Gogle Drive space | 100GB  |
-|  Google Colab Pro space | 190GB  |
+    |---|---|---|---|---|
+    | Spanish speech and transcripts data size  | 35GB   |
+    | Spanish speech and transcripts with aligned English translations  |  13GB |
+    | Sampling Rate  | 48KHZ   |
+    |  Total hours of audio | 350  |
+    |  Gogle Drive space | 100GB  |
+    |  Google Colab Pro space | 190GB  |
 
 ##### Engineering
 Group-6 will use Google Colab Pro for training the model, and PyTorch as the framework. The codebase will be based on "Fine-tuning XLSR-Wav2Vec2 for Multi-Lingual ASR with Huggingface Transformers" by Patrick von Platen, which is avaliable at (https://colab.research.google.com/github/patrickvonplaten/notebooks/blob/master/Fine_Tune_XLSR_Wav2Vec2_on_Turkish_ASR_with_%F0%9F%A4%97_Transformers.ipynb)
