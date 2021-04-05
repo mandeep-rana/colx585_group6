@@ -14,7 +14,7 @@
 ##### Data
 We will be using multilingual corpus of ‘TEDx talks for speech recognition and translation’ from http://openslr.org/100/.  Statistics about the data is as below:
 
-
+|Data|Size Information|
 |---|---|
 | Spanish speech and transcripts data size  | 35GB |
 | Spanish speech and transcripts with aligned English translations  |  13GB |
