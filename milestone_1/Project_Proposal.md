@@ -2,7 +2,7 @@
 
 ##### Introduction
  - This project will use `Automatic Speech Recognition(ASR)` with Wav2Vec2 on Spanish Audio and convert it to English text. 
- - Our plan is to utilize a fine tuned XLSR-Wav2Vec2 Multilingual model using `Huggingface Transformer`, input the Spanish audio dataset from `openslr.org` or `commonvoice.mozilla.org`. The overall model architecture will be pipeline based, where audio input will first be converted into Spanish text using XSLR-Wav2Vec2. Then we will use this text output from XLSR as an input for an MT model, which will translate the Spanish text to English text-based translation.
+ - Our plan is to utilize a fine tuned XLSR-Wav2Vec2 Multilingual model using `Huggingface Transformer`, input the Spanish audio dataset from `openslr.org` or `commonvoice.mozilla.org`. The overall model architecture will be pipeline based, where audio input will first be converted into Spanish text using XLSR-Wav2Vec2. Then we will use this text output from XLSR as an input for an MT model, which will translate the Spanish text to English text-based translation.
 
 ![](./img/flow.PNG)
 
@@ -20,7 +20,7 @@ We will be using multilingual corpus of ‘TEDx talks for speech recognition and
 | Spanish speech and transcripts with aligned English translations  |  13GB |
 | Talks  | 1031   |
 | Sampling Rate  | 48KHZ   |
-|  Total hours of audio | ~218  |
+|  Total hours of audio | ~216  |
 |  Gogle Drive space | 100GB  |
 |  Google Colab Pro space | 190GB  |
 
@@ -30,7 +30,7 @@ We will be using multilingual corpus of ‘TEDx talks for speech recognition and
 | Train | 988 | 102171 | 1676862 | 212h18m21s |
 | Valid | 12 | 905 | 14327 | 1h56m53s |
 | Test | 301 | 1012 | 15439 | 2h4m35s |
-| iwslt2021 | 15 | 996 | 16229 | 2h2m46s |
+
 
 
 ##### Engineering
@@ -53,5 +53,7 @@ We will evaluate out system on two main metrics. One is WER(Word error rate) for
 - We will deliver an End to End working model which will fulfill the objective of the project and completed on time, with the quality as per defined in the different milestones
 
 ##### Project Milestones
+
+Project milestone is based on current plan as of today, there may be change in some of deliverables based on the complexity or if there is any change in plan.
 
 ![](./img/timeline.PNG)
