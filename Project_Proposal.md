@@ -4,7 +4,7 @@
  - This project will use `Automatic Speech Recognition(ASR)` with Wav2Vec2 on Spanish Audio and convert it to English text. 
  - Our plan is to utilize a fine tuned XLSR-Wav2Vec2 Multilingual model using `Huggingface Transformer`, input the Spanish audio dataset from `openslr.org` or `commonvoice.mozilla.org`. The overall model architecture will be pipeline based, where audio input will first be converted into Spanish text using XSLR-Wav2Vec2. Then we will use this text output from XLSR as an input for an MT model, which will translate the Spanish text to English text-based translation.
 
-![](./img/timeline.PNG)
+![](./img/flow.PNG)
 
 ##### Motivation
 - It's a very intriguing, and exciting project to work on, moreover, it is a great opportunity for us to learn new models which fall into the speech data processing category (example: XLSR- released in September 2020), and combine these new tools with what we have learned in the previous block (NMT , FastText etc). We aim to create a new model which is relatively new in terms of work done in the industry.
@@ -21,6 +21,11 @@ We will be using multilingual corpus of ‘TEDx talks for speech recognition and
     |  Total hours of audio | 350  |
     |  Gogle Drive space | 100GB  |
     |  Google Colab Pro space | 190GB  |
+    |---|---|---|---|---|
+    
+| Attempt | #1  | #2  |
+| :-----: | :-: | :-: |
+| Seconds | 301 | 283 |
 
 ##### Engineering
 Group-6 will use Google Colab Pro for training the model, and PyTorch as the framework. The codebase will be based on "Fine-tuning XLSR-Wav2Vec2 for Multi-Lingual ASR with Huggingface Transformers" by Patrick von Platen, which is avaliable at (https://colab.research.google.com/github/patrickvonplaten/notebooks/blob/master/Fine_Tune_XLSR_Wav2Vec2_on_Turkish_ASR_with_%F0%9F%A4%97_Transformers.ipynb)
