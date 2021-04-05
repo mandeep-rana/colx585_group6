@@ -51,7 +51,7 @@
 
 ### Meeting style
 
-### Meetings Rules
+#### Meetings Rules
 - Meetings will take place on Zoom.
 - Each member agrees to have a primary meeting at the beginning of each week to assess the tasks for that week.
 - Each member agrees to have optional subsequent meetings to update the group on their progress or other concerns regarding the project.
