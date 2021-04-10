@@ -4,6 +4,11 @@
  - This project will use `Automatic Speech Recognition(ASR)` with Wav2Vec2 on Spanish Audio and convert it to English text. 
  - Our plan is to utilize a fine tuned XLSR-Wav2Vec2 Multilingual model using `Huggingface Transformer`, input the Spanish audio dataset from `openslr.org` or `commonvoice.mozilla.org`. The overall model architecture will be pipeline based, where audio input will first be converted into Spanish text using XLSR-Wav2Vec2. Then we will use this text output from XLSR as an input for an MT model, which will translate the Spanish text to English text-based translation.
 
+Update from Week 2:
+After extensive testing on the Spanish audio dataset, the team finds out that Google Collab cannot handble the size of Spanish audio training dataset. Therefore, the team is shifting focus to languagues such as Estonian, Czech, Portuguese, and Basque, which all have smaller datasets. In addition, the team switched from Open SLR to Mozilla Common Voice as the dataset provider, since Mozilla Common Voice gives a more diverse training data in terms of topics and voice.
+
+Aside from minor changes in data. The overall goal still holds true from Milestone 1. The team is building a machine learning model for translating non-English audio into English text.
+
 ![](./img/flow.PNG)
 
 ##### Motivation
