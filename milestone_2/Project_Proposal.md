@@ -13,7 +13,7 @@ Aside from minor changes in data. The overall goal still holds true from Milesto
 
 ##### Motivation
 - It's a very intriguing, and exciting project to work on, moreover, it is a great opportunity for us to learn new models which fall into the speech data processing category (example: XLSR- released in September 2020), and combine these new tools with what we have learned in the previous block (NMT , FastText etc). We aim to create a new model which is relatively new in terms of work done in the industry.
-- We want to design this project in State of the art fashion and create an End to End model for audio to language translation. This model can be further extended to translate audio from one language to text of different language which will help others to explore this domain.
+- We want to design this project in State of the art fashion and create an pipeline model for audio to language translation. This model can be further extended to translate audio from one language to text of different language which will help others to explore this domain.
 - By working on this project, we will learn newly introduced models and technology which will help us to understand these concepts in detail.
 
 ##### Data
@@ -64,7 +64,7 @@ Update from week 2:
 The team trained XLSR-Wav2Vec2 models on Estonian and Portuguese and tested the WER. The WER for Estonian is 0.43 and the WER for Portuguese is better at 0.282000
 
 ##### Conclusion
-- We will deliver an End to End working model which will fulfill the objective of the project and completed on time, with the quality as per defined in the different milestones
+- We will deliver an working model which will fulfill the objective of the project and completed on time, with the quality as per defined in the different milestones
 
 ##### Project Milestones
 
