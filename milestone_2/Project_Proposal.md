@@ -64,7 +64,7 @@ Update from week 2:
 The team trained XLSR-Wav2Vec2 models on Estonian and Portuguese and tested the WER. The WER for Estonian is 0.43 and the WER for Portuguese is better at 0.282000
 
 ##### Conclusion
-- We will deliver an working model which will fulfill the objective of the project and completed on time, with the quality as per defined in the different milestones
+- We will deliver a working model which will fulfill the objective of the project and completed on time, with the quality as per defined in the different milestones
 
 ##### Project Milestones
 
