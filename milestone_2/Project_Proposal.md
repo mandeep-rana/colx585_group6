@@ -61,7 +61,7 @@ Additionally, all team members have worked on machine translation project last b
 We will evaluate out system on two main metrics. One is WER(Word error rate) for audio conversion and other is BLEU score for Spanish to English text conversion.
 
 Update from week 2:
-The team trained XLSR-Wav2Vec2 models on Estonian and Portuguese and tested the WER. The WER for Estonian is 0.43 and the WER for Portuguese is better at 0.29
+The team trained XLSR-Wav2Vec2 models on Estonian and Portuguese and tested the WER. The WER for Estonian is 0.43 and the WER for Portuguese is better at 0.282000
 
 ##### Conclusion
 - We will deliver an End to End working model which will fulfill the objective of the project and completed on time, with the quality as per defined in the different milestones
