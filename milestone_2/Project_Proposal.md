@@ -93,9 +93,11 @@ Out of scope now:
 | Test | 35 | ~4.5 hrs |
 
 
-**Update from Week 2:**
+
 
 ##### Challenges
+
+**Update from Week 2:**
 
 ###### Drive & Colab Space and training time 
 
