@@ -4,10 +4,8 @@
  - This project will use `Automatic Speech Recognition(ASR)` with Wav2Vec2 on Spanish Audio and convert it to English text. 
  - Our plan is to utilize a fine tuned XLSR-Wav2Vec2 Multilingual model using `Huggingface Transformer`, input the Spanish audio dataset from `openslr.org` or `commonvoice.mozilla.org`. The overall model architecture will be pipeline based, where audio input will first be converted into Spanish text using XLSR-Wav2Vec2. Then we will use this text output from XLSR as an input for an MT model, which will translate the Spanish text to English text-based translation.
 
-Update from Week 2:
-After extensive testing on the Spanish audio dataset, the team finds out that Google Collab cannot handble the size of Spanish audio training dataset. Therefore, the team is shifting focus to languagues such as Estonian, Czech, Portuguese, and Basque, which all have smaller datasets. In addition, the team switched from Open SLR to Mozilla Common Voice as the dataset provider, since Mozilla Common Voice gives a more diverse training data in terms of topics and voice.
+The overall goal still holds true from Milestone 1. The team is building a machine learning model for translating for either of  Estonian, Czech and Portuguese audio( depending on lowest WER amongst them)  into English text.
 
-Aside from minor changes in data. The overall goal still holds true from Milestone 1. The team is building a machine learning model for translating non-English audio into English text.
 
 ![](./img/flow.PNG)
 
@@ -18,6 +16,8 @@ Aside from minor changes in data. The overall goal still holds true from Milesto
 
 ##### Data
 We will be using multilingual corpus of ‘TEDx talks for speech recognition and translation’ from http://openslr.org/100/.  Statistics about the data is as below:
+
+Out of scope now:
 
 |Data|Size Information|
 |---|---|
@@ -36,20 +36,100 @@ We will be using multilingual corpus of ‘TEDx talks for speech recognition and
 | Valid | 12 | 905 | 14327 | 1h56m53s |
 | Test | 301 | 1012 | 15439 | 2h4m35s |
 
-Update from Week 2:
+**Update from Week 2:**
 
-The team members have tried to train the speech recognition model on the Spanish speech data on Goolge Colab Pro with additional Google Drive space. However, even with additional disk space from the premium tier, the Spanish speech data seems to be too large to be trained on Google Colab. Therefore, the team is considering using smaller datasets on languages such as Estonian, Czech, Portuguese, or Basque. The team has also switched the data source from Open SLR to Mozilla Common Voice because Mozilla Common Voice dataset has more samples and sample diversity. After testing training Estonian, Czech, Portuguese, and Basque dataset on Google Collab, the team finds that Estonian dataset and Portuguese datasets are small enough to be trained within Google Collab. Therefore, the team will focus on Estonian audio or Portuguese audio to English text translation task.
+|Google|Size Information|
+|---|---|
+|  Gogle Drive space | 100GB  |
+|  Google Colab Pro space | 190GB  |
+
+|Data|Size Information|
+|---|---|
+| Estonian speech and transcripts data size  | 732 MB |
+| Talks  | 543   |
+| Audio Format | mp3 |
+| Sampling Rate  | 48KHZ   |
+|  Total hours of audio | ~27  |
+|  Validated hours of audio | ~19  |
+
+    
+| Set | Talks | Time |
+| :-----: | :-: | :-: | 
+| Train | 435 |  ~21 hrs |
+| Valid | 54 | ~3 hrs |
+| Test | 54 | ~3 hrs |
+
+|Data|Size Information|
+|---|---|
+| Portuguese speech and transcripts data size  |  2 GB |
+| Talks  | 1120   |
+| Audio Format | mp3 |
+| Sampling Rate  | 48KHZ   |
+|  Total hours of audio | ~63  |
+|  Validated hours of audio | ~50  |
+
+    
+| Set | Talks | Time |
+| :-----: | :-: | :-: | 
+| Train | 896 |  ~51 hrs |
+| Valid | 112 | ~6 hrs |
+| Test | 112 | ~6 hrs |
+
+
+|Data|Size Information|
+|---|---|
+| Czech speech and transcripts data size  | 1GB |
+| Talks  | 353   |
+| Audio Format | mp3 |
+| Sampling Rate  | 48KHZ   |
+|  Total hours of audio | ~45  |
+|  Validated hours of audio | ~36  |
+
+    
+| Set | Talks | Time |
+| :-----: | :-: | :-: | 
+| Train | 283 |  ~36 hrs |
+| Valid | 35 | ~4.5 hrs |
+| Test | 35 | ~4.5 hrs |
+
+
+
+
+##### Challenges
+
+**Update from Week 2:**
+
+###### Drive & Colab Space and training time 
+
+- After extensive testing on the Spanish audio dataset, the team finds out that Google Colab cannot handle the size of Spanish audio training dataset even we had space Google colab Pro(200 GB) and Google Drive (200GB).  Therefore, the team is shifting focus to languages such as `Estonian, Czech and Portuguese`, which all have smaller datasets. In addition, the team switched from Open SLR to Mozilla Common Voice as the dataset provider, since Mozilla Common Voice is better integrated with Wav2vec2 model than openslr. 
+
+- Each model is taking ~15-20 hours to train which is very time consuming. 
+
+Aside from minor changes in data. The overall goal still holds true from Milestone 1. The team is building a machine learning model for translating for either of  Estonian, Czech and Portuguese audio( depending on lowest WER amongst them)  into English text.
+
+
 
 ##### Engineering
-Group-6 will use Google Colab Pro for training the model, and PyTorch as the framework. The codebase will be based on "Fine-tuning XLSR-Wav2Vec2 for Multi-Lingual ASR with Huggingface Transformers" by Patrick von Platen, which is avaliable at (https://colab.research.google.com/github/patrickvonplaten/notebooks/blob/master/Fine_Tune_XLSR_Wav2Vec2_on_Turkish_ASR_with_%F0%9F%A4%97_Transformers.ipynb)
+Group-6 will use Google Colab Pro for training the model, and PyTorch as the framework. The codebase will be based on "Fine-tuning XLSR-Wav2Vec2 for Multi-Lingual ASR with Huggingface Transformers" by Patrick von Platen, which is available at (https://colab.research.google.com/github/patrickvonplaten/notebooks/blob/master/Fine_Tune_XLSR_Wav2Vec2_on_Turkish_ASR_with_%F0%9F%A4%97_Transformers.ipynb)
 
 The project's input is Spanish audio, and the output is English text. Therefore, the project can be broken into two parts: the upstream task of converting Spanish audio into vector representation and the downstream task of converting that Spanish vector representation into English text.
 
-For the audio conversion part of the project, the team plan to use XLSR-Wav2Vec2 model, which is a transformers model that comes with the transformers package. For the vector to text part of the project, the team plan to try a any  of LSTM, transformer and seq2seq models with pretrained embeddings like FastText.
+For the audio conversion part of the project, the team plan to use XLSR-Wav2Vec2 model. For the vector to text part of the project, the team plan to try a any  of LSTM, transformer and seq2seq models with pretrained embeddings like FastText(https://fasttext.cc/docs/en/crawl-vectors.html).
 
-Update from week 2:
+**Update from week 2:**
 
-The team members have trained XLSR-Wav2Vec2 models using Estonian and Portuguese data from Mozilla Common Voice. Those two langauges have a small enough training dataset to be trained within Google Collab. The team have also identified a list of resources for pre-trained word embeddings for those two languages, which would be helpful in building the translation task. The team is making good progress and constanly sharing results in the slack channel.
+The team members have trained XLSR-Wav2Vec2 models using Estonian, Czech and Portuguese data from Mozilla Common Voice. Those three languages have a small enough training dataset to be trained within Google Collab. The team have also identified a list of resources for pre-trained word embeddings for those three languages, which would be helpful in building the translation task. The team is making good progress and constantly sharing results in the slack channel.
+
+**Audio Quality :** We have listened to audio quality of few files and there were not any noise issues.
+
+**Language model :** We will not be using any language model in our pipeline to enhance our model's performace due to time constraint.
+
+**Pre-processing of Transcriptions :** We cleaned the data using the regex during pre-processing stage. 
+
+**Base-line model :** We will be using same intial hyperparameters from the wav2vec2 template to baseline the model and then will fine tune the hyperparmeter to get the target WER range.
+
+**Downsampling :** We will make use of the librosa library to downsample the data to 16KHZ
+
 
 ##### Previous Works
 
@@ -60,8 +140,12 @@ Additionally, all team members have worked on machine translation project last b
 ##### Evaluation
 We will evaluate out system on two main metrics. One is WER(Word error rate) for audio conversion and other is BLEU score for Spanish to English text conversion.
 
-Update from week 2:
-The team trained XLSR-Wav2Vec2 models on Estonian and Portuguese and tested the WER. The WER for Estonian is 0.43 and the WER for Portuguese is better at 0.282000
+**Update from week 2**
+- The team trained XLSR-Wav2Vec2 models on Estonian,Czech and Portuguese and tested the WER. The WER for Estonian is 0.43, Czech is 0.40 and the WER for Portuguese is better at 0.282000. Additionaly we tried Basque language too which has WER 0.286 before google colab crashed  at 29/30 epoch. We may try this again this week to see if this works.
+
+- We will start with baseline WER and will try to achieve 10% improvement on WER for Portuguese which has best WER of all three  languages.
+
+- We will report WER on ASR model, BLEU on MT and then BLEU on the entire pipeline.
 
 ##### Conclusion
 - We will deliver a working model which will fulfill the objective of the project and completed on time, with the quality as per defined in the different milestones
