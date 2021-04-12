@@ -4,7 +4,7 @@
  - This project will use `Automatic Speech Recognition(ASR)` with Wav2Vec2 on Spanish Audio and convert it to English text. 
  - Our plan is to utilize a fine tuned XLSR-Wav2Vec2 Multilingual model using `Huggingface Transformer`, input the Spanish audio dataset from `openslr.org` or `commonvoice.mozilla.org`. The overall model architecture will be pipeline based, where audio input will first be converted into Spanish text using XLSR-Wav2Vec2. Then we will use this text output from XLSR as an input for an MT model, which will translate the Spanish text to English text-based translation.
 
-The overall goal still holds true from Milestone 1. The team is building a machine learning model for translating for either of  Estonian, Czech and Portuguese audio( depending on best WER)  into English text.
+The overall goal still holds true from Milestone 1. The team is building a machine learning model for translating for either of  Estonian, Czech and Portuguese audio( depending on lowest WER amongst them)  into English text.
 
 
 ![](./img/flow.PNG)
@@ -105,7 +105,7 @@ Out of scope now:
 
 - Each model is taking ~15-20 hours to train which is very time consuming. 
 
-Aside from minor changes in data. The overall goal still holds true from Milestone 1. The team is building a machine learning model for translating for either of  Estonian, Czech and Portuguese audio( depending on best WER)  into English text.
+Aside from minor changes in data. The overall goal still holds true from Milestone 1. The team is building a machine learning model for translating for either of  Estonian, Czech and Portuguese audio( depending on lowest WER amongst them)  into English text.
 
 
 
@@ -118,15 +118,15 @@ For the audio conversion part of the project, the team plan to use XLSR-Wav2Vec2
 
 **Update from week 2:**
 
-The team members have trained XLSR-Wav2Vec2 models using Estonian and Portuguese data from Mozilla Common Voice. Those two languages have a small enough training dataset to be trained within Google Collab. The team have also identified a list of resources for pre-trained word embeddings for those two languages, which would be helpful in building the translation task. The team is making good progress and constantly sharing results in the slack channel.
+The team members have trained XLSR-Wav2Vec2 models using Estonian, Czech and Portuguese data from Mozilla Common Voice. Those three languages have a small enough training dataset to be trained within Google Collab. The team have also identified a list of resources for pre-trained word embeddings for those three languages, which would be helpful in building the translation task. The team is making good progress and constantly sharing results in the slack channel.
 
-**Audio Quality :** We have listened to audio quality of few files and there was not any noise issues.
+**Audio Quality :** We have listened to audio quality of few files and there were not any noise issues.
 
-**Language model :** We will not be using any language model to enhance our model's performace due to time constraint at the end of pipeline
+**Language model :** We will not be using any language model in our pipeline to enhance our model's performace due to time constraint.
 
-**Pre-processing of Transcriptions :** We cleaned the data using the regex. 
+**Pre-processing of Transcriptions :** We cleaned the data using the regex during pre-processing stage. 
 
-**Base-line model :** We will using same intial hyperparameters from the wav2vec2 template to baseline the model and then will fine tune the hyperparmeter to get the target WER range.
+**Base-line model :** We will be using same intial hyperparameters from the wav2vec2 template to baseline the model and then will fine tune the hyperparmeter to get the target WER range.
 
 **Downsampling :** We will make use of the librosa library to downsample the data to 16KHZ
 
@@ -141,9 +141,9 @@ Additionally, all team members have worked on machine translation project last b
 We will evaluate out system on two main metrics. One is WER(Word error rate) for audio conversion and other is BLEU score for Spanish to English text conversion.
 
 **Update from week 2**
-- The team trained XLSR-Wav2Vec2 models on Estonian and Portuguese and tested the WER. The WER for Estonian is 0.43 and the WER for Portuguese is better at 0.282000. 
+- The team trained XLSR-Wav2Vec2 models on Estonian,Czech and Portuguese and tested the WER. The WER for Estonian is 0.43, Czech is 0.40 and the WER for Portuguese is better at 0.282000. Additionaly we tried Basque language too which has WER 0.286 before google colab crashed  at 29/30 epoch. We may try this again this week to see if this works.
 
-- We will start with baseline WER and will try to achieve 10% improvement on WER
+- We will start with baseline WER and will try to achieve 10% improvement on WER for Portuguese which has best WER of all three  languages.
 
 - We will report WER on ASR model, BLEU on MT and then BLEU on the entire pipeline.
 
