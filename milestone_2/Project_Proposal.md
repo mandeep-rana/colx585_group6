@@ -122,7 +122,7 @@ The team members have trained XLSR-Wav2Vec2 models using Estonian and Portuguese
 
 **Audio Quality :** We have listened to audio quality of few files and there was not any noise issues.
 
-**language model :** We will not be using any language model to enhance our model's performace due to time constraint at the end of pipeline
+**Language model :** We will not be using any language model to enhance our model's performace due to time constraint at the end of pipeline
 
 **Pre-processing of Transcriptions :** We cleaned the data using the regex. 
 
