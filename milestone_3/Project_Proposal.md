@@ -80,8 +80,7 @@ For the audio conversion part of the project, the team is using the XLSR-Wav2Vec
 
 Iteration 1 – BLEU score – 0.30
 training_args = TrainingArguments(
-  output_dir="/content/gdrive/MyDrive/wav2vec2-large-xlsr-portuguese-demo",
-  # output_dir="./wav2vec2-large-xlsr-turkish-demo",
+  output_dir="/content/gdrive/MyDrive/wav2vec2-large-xlsr-portuguese-demo",  
   group_by_length=True,
   per_device_train_batch_size=16,
   gradient_accumulation_steps=2,
@@ -114,7 +113,6 @@ Iteration 3 : WER score – 0.2860 - BLEU = 58.39
 
 training_args = TrainingArguments(
   output_dir="/content/gdrive/MyDrive/COLX585/wav2vec2_pt",   ### this line
-  # output_dir="./wav2vec2-large-xlsr-turkish-demo",
   group_by_length=True,
   per_device_train_batch_size=16,
   gradient_accumulation_steps=2,
