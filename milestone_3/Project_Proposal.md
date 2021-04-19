@@ -78,54 +78,54 @@ For the audio conversion part of the project, the team is using the XLSR-Wav2Vec
 
 **Hyperparameter Tuning**
 
-Iteration 1 – BLEU score – 0.30
-training_args = TrainingArguments(
-  output_dir="/content/gdrive/MyDrive/wav2vec2-large-xlsr-portuguese-demo",  
-  group_by_length=True,
-  per_device_train_batch_size=16,
-  gradient_accumulation_steps=2,
-  evaluation_strategy="steps",
-  num_train_epochs=25,
-  fp16=True,
-  save_steps=800,
-  eval_steps=400,
-  logging_steps=400,
-  learning_rate=3e-4,
-  warmup_steps=500,
-  save_total_limit=2,
-)
+**Iteration 1 – BLEU score – 0.30**
+    training_args = TrainingArguments(
+      output_dir="/content/gdrive/MyDrive/wav2vec2-large-xlsr-portuguese-demo",  
+      group_by_length=True,
+      per_device_train_batch_size=16,
+      gradient_accumulation_steps=2,
+      evaluation_strategy="steps",
+      num_train_epochs=25,
+      fp16=True,
+      save_steps=800,
+      eval_steps=400,
+      logging_steps=400,
+      learning_rate=3e-4,
+      warmup_steps=500,
+      save_total_limit=2,
+    )
 
-model = Wav2Vec2ForCTC.from_pretrained(
-    "facebook/wav2vec2-large-xlsr-53", 
-    attention_dropout=0.1,
-    hidden_dropout=0.1,
-    feat_proj_dropout=0.0,
-    mask_time_prob=0.05,
-    layerdrop=0.1,
-    gradient_checkpointing=True, 
-    ctc_loss_reduction="mean", 
-    pad_token_id=processor.tokenizer.pad_token_id,
-    vocab_size=len(processor.tokenizer)
-)
+    model = Wav2Vec2ForCTC.from_pretrained(
+        "facebook/wav2vec2-large-xlsr-53", 
+        attention_dropout=0.1,
+        hidden_dropout=0.1,
+        feat_proj_dropout=0.0,
+        mask_time_prob=0.05,
+        layerdrop=0.1,
+        gradient_checkpointing=True, 
+        ctc_loss_reduction="mean", 
+        pad_token_id=processor.tokenizer.pad_token_id,
+        vocab_size=len(processor.tokenizer)
+    )
 
-Iteration 3 : WER score – 0.2860 - BLEU = 58.39
+**Iteration 2 : WER score – 0.2860 - BLEU = 58.39**
 
 
-training_args = TrainingArguments(
-  output_dir="/content/gdrive/MyDrive/COLX585/wav2vec2_pt",   ### this line
-  group_by_length=True,
-  per_device_train_batch_size=16,
-  gradient_accumulation_steps=2,
-  evaluation_strategy="steps",
-  num_train_epochs=30,
-  fp16=True,
-  save_steps=800,
-  eval_steps=400,
-  logging_steps=400,
-  learning_rate=3e-4,
-  warmup_steps=500,
-  save_total_limit=2,
-)
+    training_args = TrainingArguments(
+      output_dir="/content/gdrive/MyDrive/COLX585/wav2vec2_pt",   ### this line
+      group_by_length=True,
+      per_device_train_batch_size=16,
+      gradient_accumulation_steps=2,
+      evaluation_strategy="steps",
+      num_train_epochs=30,
+      fp16=True,
+      save_steps=800,
+      eval_steps=400,
+      logging_steps=400,
+      learning_rate=3e-4,
+      warmup_steps=500,
+      save_total_limit=2,
+    )
 
 
 ##### Previous Works
