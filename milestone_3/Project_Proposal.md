@@ -11,6 +11,9 @@
 - It's a very intriguing, and exciting project to work on, moreover, it is a great opportunity for us to learn new models which fall into the speech data processing category (example: XLSR- released in September 2020), and combine these new tools with what we have learned in the previous block (NMT , FastText etc). We aim to create a new model which is relatively new in terms of work done in the industry.
 - We want to design this project in State of the art fashion and create a pipeline model for audio to language translation. This model can be further extended to translate the audio from one language to text of a different language which will help others to explore this domain.
 - By working on this project, we will learn newly introduced models and technology which will help us to understand these concepts in detail.
+- Speech translation has many applications that include travel assistants(two-way translation system on a mobile device), movie dubbing/subtitling, language documentation, and crisis response, Simultaneous translation for lecture translation application. These applications can benefit all the people even though they are speaking different languages. These applications will help in overcoming language barriers and help in more business, more interaction between different language speaking people.
+ 
+ All above mentioned benefits intrigued us to choose for Speech Translation project.
 
 ##### Data
 
