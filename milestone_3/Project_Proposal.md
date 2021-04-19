@@ -79,22 +79,24 @@ For the audio conversion part of the project, the team is using the XLSR-Wav2Vec
 **Hyperparameter Tuning**
 
 **Iteration 1 – BLEU score – 0.30**
-    training_args = TrainingArguments(
-      output_dir="/content/gdrive/MyDrive/wav2vec2-large-xlsr-portuguese-demo",  
-      group_by_length=True,
-      per_device_train_batch_size=16,
-      gradient_accumulation_steps=2,
-      evaluation_strategy="steps",
-      num_train_epochs=25,
-      fp16=True,
-      save_steps=800,
-      eval_steps=400,
-      logging_steps=400,
-      learning_rate=3e-4,
-      warmup_steps=500,
-      save_total_limit=2,
-    )
+        
 
+    training_args = TrainingArguments(
+          output_dir="/content/gdrive/MyDrive/wav2vec2-large-xlsr-portuguese-demo",  
+          group_by_length=True,
+          per_device_train_batch_size=16,
+          gradient_accumulation_steps=2,
+          evaluation_strategy="steps",
+          num_train_epochs=25,
+          fp16=True,
+          save_steps=800,
+          eval_steps=400,
+          logging_steps=400,
+          learning_rate=3e-4,
+          warmup_steps=500,
+          save_total_limit=2,
+        )
+        
     model = Wav2Vec2ForCTC.from_pretrained(
         "facebook/wav2vec2-large-xlsr-53", 
         attention_dropout=0.1,
