@@ -2,7 +2,7 @@
 This project presents a Portuguese speech to English text cascade model. Since Portuguese is a low-resource language, a quick look at its applications in the field of ASR shows that most of the work done is monolingual (e.g. Portuguese speech to Portuguese text tasks). Furthermore, with the introduction of XLSR Wav2Vec2, a more powerful ASR model can be built using low-resource languages and applied on multilingual tasks. With this, the group builds on XLSR Wav2Vec2, fine-tuning it on Portuguese data to generate Portuguese texts that are given to an OpenNMT transformer model to translate to English. Our model yields a 7.31 BLEU score and Word Error Rate (WER) of 0.2860 which are reasonable in a low-resource setting.
 
 ##### Introduction
-The field of Automatic Speech Recognition (ASR) has been around for more than 60 years gradually being developed on high-resource languages like English and then moving on to more language-specific systems that include low-resource languages like Portuguese. Currently, ASR is used as a tool in different fields to help treat speech dysfunctions, evaluate second-language proficiency, improve virtual assistant programs, and develop automatic transcription systems for movies and TV shows (De Lima & Da Costa-Abreu, 2019). These ASR applications are mostly monolingual but can be extended to multilingual settings when combined with Machine Translation. Group-6 aims to contribute to the growing body of multilingual ASR applications on Portuguese using a cascade model that generates English text from Portuguese audio.
+The field of Automatic Speech Recognition (ASR) has been around for more than 60 years gradually being developed on high-resource languages like English and then moving on to more language-specific systems that include low-resource languages like Portuguese. Currently, ASR is used as a tool in different fields to help treat speech dysfunctions, evaluate second-language proficiency, improve virtual assistant programs, and develop automatic transcription systems for movies and TV shows (De Lima & Da Costa-Abreu, 2020). These ASR applications are mostly monolingual but can be extended to multilingual settings when combined with Machine Translation. Group-6 aims to contribute to the growing body of multilingual ASR applications on Portuguese using a cascade model that generates English text from Portuguese audio.
 
 A summary of related works focusing on Portuguese ASR is provided below showing its progress throughout the years, followed by a description of the data used by the project to train the model. Then, an explanation of the methods and a description of the cascade model is given as well as the different experiments that were ran to accomplish the speech-to-text task. Finally, a table summarizing the results of the project is provided with some concluding remarks.
  
@@ -52,3 +52,17 @@ Instead of doing pipeline model we could have tried for tightly coupled End-To-E
 We could have gotten better scores if we can train on High Resource Language.
 
 ###### Reference List
+
+Conneau, A., Baevski, A., Collobert, R., Mohamed, A., Auli, M., 2020. Unsupervised cross-lingual representation learning for speech recognition.  arXiv:2006.13979v2.https://arxiv.org/abs/2006.13979.
+
+De Lima, T., Da Costa-Abreu, M., 2020. A survey on automatic speech recognition systems for Portuguese language and its variations. In: Computer Speech & Language(62).https://doi.org/10.1016/j.csl.2019.101055
+
+Ghoshal, A., Swietojanski, P., Renals, S., 2013. Multilingual training of deep neural networks. In: Proceedings of the IEEE International Conference on Acoustics,Speech and Signal Processing, pp. 7319–7323.https://doi.org/10.1109/ICASSP.2013.6639084
+
+Santos, R.M., Matos, L.N., Macedo, H.T., Montalvao, J., 2015. Speech recognition in noisy environments with convolutional neural networks. In: Proceedings of theBrazilian Conference on Intelligent Systems (BRACIS), pp. 175–179.https://doi.org/10.1109/BRACIS.2015.44.
+
+Shaik, M.A.B., Tuske, Z., Tahir, M.A., Nußbaum-Thom, M., Schluter, R., Ney, H., 2015. Improvements in RWTH LVCSR evaluation systems for polish, portuguese, english, urdu, and arabic. In: Proceedings of the Sixteenth Annual Conference of the International Speech Communication Association.
+
+Silva, W., Serra, G., 2014. Intelligent genetic fuzzy inference system for speech recognition: an approach from low order feature based on discrete cosine tranform. J. Control, Autom.Electr.Syst.25(6),689-698.https://doi.org/10.1007/s40313-014-0148-0.
+
+Silva, W.L.S., Barbosa, F.G., 2015. Automatic voice recognition system based on multiple support vector machines and mel-frequency cepstral coefficients. In:Proceedings of the 11th International Conference on Natural Computation (ICNC), pp. 665–670.https://doi.org/10.1109/ICNC.2015.7378069.
