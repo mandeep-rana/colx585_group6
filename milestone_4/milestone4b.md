@@ -31,10 +31,11 @@ Group-6 conducted three experiments. The first experiment is to test the perform
 For evaluating the entire pipeline, the team used a silver prediction data, generated from Google translate, because there is lack of aligned Portuguese Audio to English Text data. There is a CoVoST 2 model (from Massively Multilingual Speech-to-Text Translation by Changhan Wang, Anne Wu, Juan Pino) that can also be potentially used to generate the silver prediction data. However, the CoVoST 2 data will take too much time to generate, thus the team has to create a silver predition dataset for the Portuguese development audio, using Google translate, and use this dataset for evaluating the model. The entire pipeline is able to achieve a BLEU of 9.0 and a word error rate of 0.286.
 
 ##### Results
-|Component|Model|Input|Output|WER|BLEU|
-|Source Audio to Source Text|Wav2vec2 Out-of-box|Portuguese Audio|Portuguese Text|0.3|BLEU|
-|Source Audio to Source Text|Wav2vec2 Fine-tuned|Portuguese Audio|Portuguese Text|0.286|58.39|
-|Source Audio to Target Text|Transformer Fine-tuned|Portuguese Audio|English Text|0.286|7.31|
+| Component | Model | Input | Output | WER | BLEU |
+|---|---|---|---|---|---|
+| Source Audio to Source Text | Wav2vec2 Out-of-box | Portuguese Audio|Portuguese Text | 0.3 | BLEU |
+| Source Audio to Source Text | Wav2vec2 Fine-tuned | Portuguese Audio|Portuguese Text | 0.286 | 58.39 |
+| Source Audio to Target Text | Transformer Fine-tuned | Portuguese Audio|English Text | 0.286 | 7.31 |
 
 The BLEU score of 7.31 and WER score of 0.2860 are reasonable scores on a Low Resource language like Portuguese with very few validated hours.  We have used Silver prediction list to get the BLEU scores. We used en_silver file from the Google translate instead of CoVoST 2 due to time restrictions.
 
