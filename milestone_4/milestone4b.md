@@ -32,7 +32,7 @@ For evaluating the entire pipeline, the team used a silver prediction data, gene
 
 ##### Results
 | Component | Model | Input | Output | WER | BLEU |
-|---|---|---|---|---|---|
+|-----------|-------|-------|--------|-----|------|
 | Source Audio to Source Text | Wav2vec2 Out-of-box | Portuguese Audio|Portuguese Text | 0.3 | BLEU |
 | Source Audio to Source Text | Wav2vec2 Fine-tuned | Portuguese Audio|Portuguese Text | 0.286 | 58.39 |
 | Source Audio to Target Text | Transformer Fine-tuned | Portuguese Audio|English Text | 0.286 | 7.31 |
@@ -42,7 +42,7 @@ The BLEU score of 7.31 and WER score of 0.2860 are reasonable scores on a Low Re
 ##### Conclusion
 We set out to make a pipeline consisting of  working ASR model which converted Portuguese speech data into Portuguese text and MT model which translated Portuguese text to English text.
 We can state that we have accomplished our task successfully. We have got WER score of 0.2860 and Overall BLEU score of 7.31
-
+##### Future Work
 ###### Adding Spellcheck/Language  Model
 Including a spellcheck model or Language model before MT model to enhance the performance
 
