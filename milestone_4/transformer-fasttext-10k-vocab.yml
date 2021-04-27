@@ -1,0 +1,88 @@
+# transformer-fasttext-10k-vocab.yml
+# updated March 21 11pm; fasttext
+# updated March 22 8:30am; unfrozen (= update embeds)
+# updated March 22 2:30pm; freeze_10k_lr1
+# updated March 23 8pm; freeze_10k_lr2; run7 -- created a new vocab + train
+# updated March 23 10pm; freeze_10k_lr2; run8 -- created a new vocab + train
+
+# Where the samples will be written
+save_data: ./drive/MyDrive/585/
+# Prevent overwriting
+overwrite: False
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src: ./drive/MyDrive/585/train.pt.tokd
+        path_tgt: ./drive/MyDrive/585/train.en.tokd
+        transforms: [filtertoolong]
+        weight: 1
+    valid:
+        path_src: ./drive/MyDrive/585/valid.pt.tokd
+        path_tgt: ./drive/MyDrive/585/valid.en.tokd
+        transforms: []
+
+# Vocab files
+src_vocab: ./drive/MyDrive/585/example.vocab.src
+tgt_vocab: ./drive/MyDrive/585/example.vocab.tgt
+
+# Pretrained word embeddings
+src_embeddings: cc.pt.300.vec
+tgt_embeddings: cc.en.300.vec
+embeddings_type: 'word2vec'
+freeze_word_vecs_enc: 'true'
+freeze_word_vecs_dec: 'true'
+
+
+# General opts
+save_model: ./drive/MyDrive/585/freeze_10k_lr2  #fasttext  #freeze_10k_lr1  # unfrozen
+save_checkpoint_steps: 500  #10000
+keep_checkpoint: 10
+seed: 3435
+train_steps: 10000  #200000  # 500000
+valid_steps:  500  #10000
+warmup_steps:  1200 #400 #8000
+report_every: 100
+early_stopping: 4  #8
+
+# Model architecture
+decoder_type: transformer
+encoder_type: transformer
+word_vec_size: 512 # 300 causes error
+rnn_size: 512
+layers: 6
+transformer_ff: 2048
+heads: 8
+
+accum_count: 8  #4 <---
+#accum_steps: [0]
+#model_dtype: "fp32"
+optim: adam
+adam_beta1: 0.9   # not in Google's best model
+adam_beta2: 0.998
+decay_method: noam
+learning_rate: 2.0  # 1.0 was suboptimal
+max_grad_norm: 0.0
+
+batch_size: 1024  #4096  #2048  #4096
+valid_batch_size: 1024  #2048  #4096
+batch_type: tokens
+normalization: tokens
+dropout: 0.2  #0.1
+attention_dropout: 0.1
+label_smoothing: 0.1
+#queue_size: 10000  #
+#backet_size: 32768  #
+
+max_generator_batches: 2
+
+param_init: 0.0
+param_init_glorot: 'true'
+position_encoding: 'true'
+
+world_size: 1
+gpu_ranks:
+- 0
+
+# Continued training
+# train_from: ./drive/MyDrive/COLX_531_T4/data/run2/model_step_20000.pt
